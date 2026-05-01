@@ -11,7 +11,7 @@ metadata:
   annotations:
     kubernetes.io/change-cause: "moving to 1.29.7"
 spec:
-  replicas: 4
+  replicas: 8
   selector:
     # by using these lables replica set select the pod
     matchLabels:
