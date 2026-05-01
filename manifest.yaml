@@ -30,7 +30,7 @@ spec:
     spec:
       topologySpreadConstraints:
       - maxSkew: 1
-        topologyKey: zone
+        topologyKey: topology.kubernetes.io/zone
         whenUnsatisfiable: DoNotSchedule # ScheduleAnyway is soft rule
         labelSelector:
           matchLabels:
@@ -39,7 +39,7 @@ spec:
             tier: frontend
             component: frontend
       - maxSkew: 1
-        topologyKey: node
+        topologyKey: kubernetes.io/hostname
         whenUnsatisfiable: DoNotSchedule
         labelSelector:
           matchLabels:
